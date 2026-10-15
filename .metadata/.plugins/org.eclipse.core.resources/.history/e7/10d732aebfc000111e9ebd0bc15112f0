@@ -1,0 +1,15 @@
+/*
+ * halWdt.h
+ *
+ *  Created on: 05.10.2026
+ *      Author: hrabo
+ */
+
+#ifndef HAL_HALWDT_H_
+#define HAL_HALWDT_H_
+
+
+
+
+
+#endif /* HAL_HALWDT_H_ */

@@ -1,0 +1,232 @@
+!SESSION 2026-10-05 14:14:41.846 -----------------------------------------------
+eclipse.buildId=4.23.0.I20220308-0310
+java.version=11.0.13
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_AT
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2026-10-05 14:15:03.526
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2026-10-05 14:15:03.535
+!MESSAGE debugServerDir=C:/ti/ccs1280/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2026-10-05 14:15:05.703
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2026-10-05 14:15:05.719
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2026-10-05 14:15:05.719
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2026-10-05 14:15:05.719
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2026-10-05 14:15:05.719
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2026-10-05 14:15:05.719
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2026-10-05 14:15:05.719
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2026-10-05 14:15:05.735
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2026-10-05 14:15:05.735
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2026-10-05 14:15:05.751
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY org.eclipse.equinox.event 4 0 2026-10-05 14:15:12.881
+!MESSAGE Exception while dispatching event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/model/application/ApplicationElement/tags/ADD] {ChangedElement=org.eclipse.e4.primaryDataStack=org.eclipse.e4.ui.model.application.ui.basic.impl.PartStackImpl@62d21afd (tags: [org.eclipse.e4.primaryDataStack, EditorStack, active, Maximized], contributorURI: null) (widget: CTabFolder {} [layout=org.eclipse.swt.custom.CTabFolderLayout@4cbf1c30], renderer: org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer@1c80f8dd, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null), org.eclipse.e4.data={ChangedElement=org.eclipse.e4.primaryDataStack=org.eclipse.e4.ui.model.application.ui.basic.impl.PartStackImpl@62d21afd (tags: [org.eclipse.e4.primaryDataStack, EditorStack, active, Maximized], contributorURI: null) (widget: CTabFolder {} [layout=org.eclipse.swt.custom.CTabFolderLayout@4cbf1c30], renderer: org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer@1c80f8dd, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null), AttName=tags, EventType=ADD, Position=3, Widget=CTabFolder {} [layout=org.eclipse.swt.custom.CTabFolderLayout@4cbf1c30], NewValue=Maximized}, AttName=tags, EventType=ADD, Position=3, Widget=CTabFolder {} [layout=org.eclipse.swt.custom.CTabFolderLayout@4cbf1c30], NewValue=Maximized} to handler org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler@3c5095df
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: java.lang.IllegalArgumentException: 
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:68)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4779)
+	at org.eclipse.e4.ui.workbench.swt.DisplayUISynchronize.syncExec(DisplayUISynchronize.java:34)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler.handleEvent(UIEventObjectSupplier.java:64)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:133)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.emf.ecore.util.EcoreEList.dispatchNotification(EcoreEList.java:249)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.addUnique(NotifyingListImpl.java:304)
+	at org.eclipse.emf.common.util.AbstractEList.add(AbstractEList.java:304)
+	at org.eclipse.ui.internal.WorkbenchIntroManager.setIntroStandby(WorkbenchIntroManager.java:200)
+	at org.eclipse.ui.internal.WorkbenchIntroManager.showIntro(WorkbenchIntroManager.java:139)
+	at org.eclipse.ui.application.WorkbenchWindowAdvisor.openIntro(WorkbenchWindowAdvisor.java:188)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchWindowAdvisor.openIntro(IDEWorkbenchWindowAdvisor.java:573)
+	at org.eclipse.ui.internal.WorkbenchWindow.setup(WorkbenchWindow.java:933)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:995)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:140)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:96)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.inject(ContextInjectionFactory.java:83)
+	at org.eclipse.ui.internal.Workbench.createWorkbenchWindow(Workbench.java:1469)
+	at org.eclipse.ui.internal.StandardTrim.createStatusLine(StandardTrim.java:118)
+	at org.eclipse.ui.internal.StandardTrim.createWidget(StandardTrim.java:48)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:995)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:140)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:403)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:344)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:227)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:94)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:37)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ToolControlRenderer.createWidget(ToolControlRenderer.java:129)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:995)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:659)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:763)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:712)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.TrimBarRenderer.processContents(TrimBarRenderer.java:109)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:544)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:528)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:680)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:763)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:712)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1083)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+Caused by: java.lang.IllegalArgumentException: 
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:66)
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:50)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElementsRecursive(ModelServiceImpl.java:175)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElements(ModelServiceImpl.java:437)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElements(ModelServiceImpl.java:430)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.findValidElementsToMinimize(MinMaxAddon.java:855)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.getElementsToMinimize(MinMaxAddon.java:798)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.maximize(MinMaxAddon.java:734)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.subscribeTopicTagsChanged(MinMaxAddon.java:408)
+	at jdk.internal.reflect.GeneratedMethodAccessor16.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	... 89 more
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2026-10-05 14:15:13.823
+!MESSAGE CCS HTTP adapter started! [ccs.port:53008] - Open 'http://localhost:53008/ide' in web browser to see listing of available APIs...
+
+!ENTRY com.ti.ccstudio.ui 1 0 2026-10-05 14:15:17.556
+!MESSAGE CCS IDE session started!
+	CCS build: 12.8.0.00012
+	CCS location: C:/ti/ccs1280/ccs
+	Workspace location: C:/Users/hrabo/workspace_v12
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2026-10-05 14:15:19.396
+!MESSAGE Using unsafe http transport to retrieve http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2win32/artifacts.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2026-10-05 14:15:20.672
+!MESSAGE Using unsafe http transport to retrieve http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2linux/artifacts.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2026-10-05 14:15:21.660
+!MESSAGE Using unsafe http transport to retrieve http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2mac/artifacts.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2026-10-05 14:15:22.566
+!MESSAGE Using unsafe http transport to retrieve http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2win32/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2026-10-05 14:15:24.194
+!MESSAGE Using unsafe http transport to retrieve http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2linux/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2026-10-05 14:15:26.194
+!MESSAGE Using unsafe http transport to retrieve http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2mac/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2026-10-05 14:15:27.933
+!MESSAGE Using unsafe http transport to retrieve http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2win32/artifacts.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2026-10-05 14:15:28.503
+!MESSAGE Using unsafe http transport to retrieve http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2linux/artifacts.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2026-10-05 14:15:29.040
+!MESSAGE Using unsafe http transport to retrieve http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2mac/artifacts.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2026-10-05 14:15:29.550
+!MESSAGE Using unsafe http transport to retrieve http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/CCSv5/Updates/, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2026-10-05 14:15:30.380
+!MESSAGE Using unsafe http transport to retrieve http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2win32/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2026-10-05 14:15:31.216
+!MESSAGE Using unsafe http transport to retrieve http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2linux/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2026-10-05 14:15:32.087
+!MESSAGE Using unsafe http transport to retrieve http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2mac/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2026-10-05 14:15:32.655
+!MESSAGE Using unsafe http transport to retrieve http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/CCSv5/Updates/, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2026-10-05 14:15:34.064
+!MESSAGE Using unsafe http transport to retrieve http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2win32/artifacts.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2026-10-05 14:15:34.611
+!MESSAGE Using unsafe http transport to retrieve http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2linux/artifacts.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2026-10-05 14:15:35.130
+!MESSAGE Using unsafe http transport to retrieve http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2win32/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2026-10-05 14:15:35.935
+!MESSAGE Using unsafe http transport to retrieve http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2linux/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-10-05 14:15:38.469
+!MESSAGE Indexed 'LAB0' (1 sources, 0 headers) in 0,282 sec: 2 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2026-10-05 14:16:45.131
+!MESSAGE Using unsafe http transport to retrieve http://www.blackhawk-dsp.com/updates/win64/com.bh.ccstudio.emulation.win64_9.0.0.001, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-10-05 14:21:01.929
+!MESSAGE Indexed 'LAB0' (1 sources, 5 headers) in 0,585 sec: 759 declarations; 1 199 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-10-05 14:44:53.177
+!MESSAGE Indexed 'LAB1' (1 sources, 5 headers) in 0,276 sec: 759 declarations; 1 199 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2026-10-05 14:48:13.498
+!MESSAGE DS_ERROR: Error initializing emulator:
+No USB FET was found
