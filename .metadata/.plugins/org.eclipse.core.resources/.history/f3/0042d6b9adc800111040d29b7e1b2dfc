@@ -1,0 +1,16 @@
+/*
+ * halGeneral.c
+ *
+ *  Created on: 05.10.2026
+ *      Author: hrabo
+ */
+#include "halGeneral.h"
+#include "halPMM.h"
+#include "halGpio.h"
+
+
+void halInit (void){
+    HAL_PMM_Init();
+    halGpioInit();
+
+}

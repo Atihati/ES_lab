@@ -1,5 +1,6 @@
 "./main.obj"
 "./HAL/halGeneral.obj"
+"./HAL/halGpio.obj"
 "./HAL/halPMM.obj"
 "./HAL/halWdt.obj"
 "../lnk_msp430bt5190.cmd"

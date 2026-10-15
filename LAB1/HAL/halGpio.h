@@ -64,9 +64,9 @@
 #define DISTANCE_RIGHT_EN  BIT7
 
 
-#define LCD_BL             BIT2
 #define LCD_BACKLIGHT_ON   (P8OUT |= LCD_BL)
 #define LCD_BACKLIGHT_OFF  (P8OUT &= ~LCD_BL)
 
+void halGpioInit(void);
 
 #endif /* HAL_HALGPIO_H_ */

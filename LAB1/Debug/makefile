@@ -12,6 +12,7 @@ GEN_CMDS__FLAG :=
 ORDERED_OBJS += \
 "./main.obj" \
 "./HAL/halGeneral.obj" \
+"./HAL/halGpio.obj" \
 "./HAL/halPMM.obj" \
 "./HAL/halWdt.obj" \
 "../lnk_msp430bt5190.cmd" \
@@ -147,8 +148,8 @@ LAB1.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "main.obj" "HAL\halGeneral.obj" "HAL\halPMM.obj" "HAL\halWdt.obj" 
-	-$(RM) "main.d" "HAL\halGeneral.d" "HAL\halPMM.d" "HAL\halWdt.d" 
+	-$(RM) "main.obj" "HAL\halGeneral.obj" "HAL\halGpio.obj" "HAL\halPMM.obj" "HAL\halWdt.obj" 
+	-$(RM) "main.d" "HAL\halGeneral.d" "HAL\halGpio.d" "HAL\halPMM.d" "HAL\halWdt.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
