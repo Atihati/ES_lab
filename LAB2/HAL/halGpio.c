@@ -7,7 +7,7 @@
 
 #include <msp430.h>
 #include "halGpio.h"
-volatile ButtonCom CCbutton;
+volatile ButtonCom CCButton;
 
 void halGpioInit(void)
 {
@@ -60,21 +60,21 @@ void halGpioInit(void)
 #pragma vector = PORT1_VECTOR
 __interrupt void P1_ISR(void)
 {
-    CCbutton.active = 1;
+    CCButton.active = 1;
 
     if (P1IFG & START_BUTTON)
     {
-        CCbutton.button = 0;
+        CCButton.button = START_BUTTON; // Setzt den erwarteten Wert (64)
         P1IFG &= ~START_BUTTON;
     }
     else if (P1IFG & STOP_BUTTON)
     {
-        CCbutton.button = 1;
+        CCButton.button = STOP_BUTTON;  // Setzt den erwarteten Wert (128)
         P1IFG &= ~STOP_BUTTON;
     }
     else
     {
-        CCbutton.button = 2;
+        CCButton.button = 2;
         P1IFG &= 0x00;
     }
 }

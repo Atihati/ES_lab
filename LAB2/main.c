@@ -3,7 +3,14 @@
 #include <stdint.h>
 #include <halGpio.h>
 
-extern volatile ButtonCom CCbutton;
+#define RUN_TESTS                   // auskommentieren für den Normalbetrieb
+
+#ifdef RUN_TESTS
+#include "testHalGeneral.h"
+#endif
+
+
+extern volatile ButtonCom CCButton;
 
 /**
  * main.c
@@ -20,14 +27,17 @@ float float_c;
 
 void main(void)
 {
-    WDTCTL = WDTPW | WDTHOLD;   // stop watchdog timer
     halInit();
+
+#ifdef RUN_TESTS
+    halInitTest();
+#endif
 
     while(1)
     {
-        if (CCbutton.active == 1)
+        if (CCButton.active == 1)
         {
-            switch (CCbutton.button)
+            switch (CCButton.button)
             {
                 case 0:             // START_BUTTON
                     LCD_BACKLIGHT_ON;      // LCD EIN
@@ -37,7 +47,7 @@ void main(void)
                     break;
             }
 
-            CCbutton.active = 0;   // Clear Flag
+            CCButton.active = 0;   // Clear Flag
         }
     }
 }
