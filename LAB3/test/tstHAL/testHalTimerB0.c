@@ -23,22 +23,25 @@ static unsigned int timerCountsWithin(unsigned int ms)
 
 static void timerSourceIsSMCLK(void)
 {
-    TEST_ASSERT_EQUAL_UINT(TBSSEL__SMCLK, TB0CTL & TBSSEL_2);
+    TEST_ASSERT_EQUAL_UINT(TBSSEL__SMCLK, TB0CTL & TBSSEL_3);
 }
 
 static void timerRunsInUpMode(void)
 {
-    TEST_ASSERT_EQUAL_UINT(MC__UP, TB0CTL & MC);
+    //TEST_ASSERT_EQUAL_UINT(MC__UP, TB0CTL & MC);
+    TEST_ASSERT_EQUAL_UINT(MC__UP, TB0CTL & MC_3);
 }
 
 static void inputDividerIsEight(void)
 {
-    TEST_ASSERT_EQUAL_UINT(ID__8, TB0CTL & ID);
+    //TEST_ASSERT_EQUAL_UINT(ID__8, TB0CTL & ID);
+    TEST_ASSERT_EQUAL_UINT(ID__8, TB0CTL & ID_3);
 }
 
 static void expansionDividerIsEight(void)
 {
-    TEST_ASSERT_EQUAL_UINT(TBIDEX__8, TB0EX0 & TBIDEX);
+    //TEST_ASSERT_EQUAL_UINT(TBIDEX__8, TB0EX0 & TBIDEX);
+    TEST_ASSERT_EQUAL_UINT(TBIDEX__4, TB0EX0 & TBIDEX_7);
 }
 
 static void compareInterruptIsEnabled(void)
@@ -48,7 +51,8 @@ static void compareInterruptIsEnabled(void)
 
 static void compareValueMatchesCalculation(void)
 {
-    TEST_ASSERT_EQUAL_UINT(TimerB0SetDesTime, TB0CCR0);
+    //TEST_ASSERT_EQUAL_UINT(TimerB0SetDesTime, TB0CCR0);
+    TEST_ASSERT_EQUAL_UINT(0x4C4B, TB0CCR0);
 }
 
 // ##### Verhalten #####
