@@ -36,18 +36,18 @@ void main(void)
     while(1)
     {
         if (CCButton.active == 1)
-        {
-            switch (CCButton.button)
-            {
-                case 0:             // START_BUTTON
-                    LCD_BACKLIGHT_ON;      // LCD EIN
-                    break;
-                case 1:             // STOP_BUTTON
-                    LCD_BACKLIGHT_OFF;     // LCD OFF
-                    break;
-            }
+                {
+                    switch (CCButton.button)
+                    {
+                        case START_BUTTON:       // Nutzt nun das korrekte Makro aus der Header-Datei
+                            LCD_BACKLIGHT_ON;    // LCD EIN
+                            break;
+                        case STOP_BUTTON:        // Nutzt nun das korrekte Makro aus der Header-Datei
+                            LCD_BACKLIGHT_OFF;   // LCD OFF
+                            break;
+                    }
 
-            CCButton.active = 0;   // Clear Flag
-        }
+                    CCButton.active = 0;   // Clear Flag
+                }
     }
 }

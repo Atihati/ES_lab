@@ -1,2 +1,3 @@
-2026/10/05-14:15:11.098 38b8 Creating DB C:\Users\hrabo\workspace_v12\.jxbrowser.userdata\Default\shared_proto_db since it was missing.
-2026/10/05-14:15:11.116 38b8 Reusing MANIFEST C:\Users\hrabo\workspace_v12\.jxbrowser.userdata\Default\shared_proto_db/MANIFEST-000001
+2026/10/16-14:39:10.396 267c Reusing MANIFEST C:\ES_repo\workspace_v12\.jxbrowser.userdata\Default\shared_proto_db/MANIFEST-000001
+2026/10/16-14:39:10.398 267c Recovering log #3
+2026/10/16-14:39:10.399 267c Reusing old log C:\ES_repo\workspace_v12\.jxbrowser.userdata\Default\shared_proto_db/000003.log 

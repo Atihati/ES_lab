@@ -1,27 +1,17 @@
 
-**** Build of configuration Debug for project LAB1 ****
+**** Clean-only build of configuration Debug for project LAB1 ****
 
-"C:\\ti\\ccs1280\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+"C:\\ti\\ccs1280\\ccs\\utils\\bin\\gmake" -k -j 8 clean -O 
  
-Building file: "../HAL/halGeneral.c"
-Invoking: MSP430 Compiler
-"C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --data_model=restricted -Ooff --use_hw_mpy=F5 --include_path="C:/ES_repo/workspace_v12/LAB1/AL" --include_path="C:/ES_repo/workspace_v12/LAB1/DL" --include_path="C:/ti/ccs1280/ccs/ccs_base/msp430/include" --include_path="C:/ES_repo/workspace_v12/LAB1/HAL" --include_path="C:/ES_repo/workspace_v12/LAB1" --include_path="C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power=all --define=__MSP430BT5190__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="HAL/halGeneral.d_raw" --obj_directory="HAL"  "../HAL/halGeneral.c"
-Finished building: "../HAL/halGeneral.c"
- 
-Building file: "../HAL/halGpio.c"
-Invoking: MSP430 Compiler
-"C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --data_model=restricted -Ooff --use_hw_mpy=F5 --include_path="C:/ES_repo/workspace_v12/LAB1/AL" --include_path="C:/ES_repo/workspace_v12/LAB1/DL" --include_path="C:/ti/ccs1280/ccs/ccs_base/msp430/include" --include_path="C:/ES_repo/workspace_v12/LAB1/HAL" --include_path="C:/ES_repo/workspace_v12/LAB1" --include_path="C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power=all --define=__MSP430BT5190__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="HAL/halGpio.d_raw" --obj_directory="HAL"  "../HAL/halGpio.c"
-Finished building: "../HAL/halGpio.c"
- 
-Building target: "LAB1.out"
-Invoking: MSP430 Linker
-"C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --data_model=restricted -Ooff --use_hw_mpy=F5 --advice:power=all --define=__MSP430BT5190__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 -z -m"LAB1.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"C:/ti/ccs1280/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1280/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/lib" -i"C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="LAB1_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "LAB1.out" "./main.obj" "./HAL/halGeneral.obj" "./HAL/halGpio.obj" "./HAL/halPMM.obj" "./HAL/halWdt.obj" "../lnk_msp430bt5190.cmd"  -llibmath.a -llibc.a 
-<Linking>
-remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
-remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
-remark #10372-D: (ULP 4.1) Detected uninitialized Port E in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
-remark #10372-D: (ULP 4.1) Detected uninitialized Port F in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
-Finished building target: "LAB1.out"
+DEL /F  "LAB1.out" 
+DEL /F "main.obj" "HAL\halGeneral.obj" "HAL\halGpio.obj" "HAL\halPMM.obj" "HAL\halWdt.obj" 
+DEL /F "main.d" "HAL\halGeneral.d" "HAL\halGpio.d" "HAL\halPMM.d" "HAL\halWdt.d" 
+C:\ES_repo\workspace_v12\LAB1\Debug\LAB1.out konnte nicht gefunden werden
+C:\ES_repo\workspace_v12\LAB1\Debug\main.obj konnte nicht gefunden werden
+C:\ES_repo\workspace_v12\LAB1\Debug\HAL\halGeneral.obj konnte nicht gefunden werden
+C:\ES_repo\workspace_v12\LAB1\Debug\main.d konnte nicht gefunden werden
+C:\ES_repo\workspace_v12\LAB1\Debug\HAL\halGeneral.d konnte nicht gefunden werden
+Finished clean
  
 
 **** Build Finished ****

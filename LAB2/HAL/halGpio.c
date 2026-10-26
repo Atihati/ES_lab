@@ -64,13 +64,13 @@ __interrupt void P1_ISR(void)
 
     if (P1IFG & START_BUTTON)
     {
-        CCButton.button = START_BUTTON; // Setzt den erwarteten Wert (64)
-        P1IFG &= ~START_BUTTON;
+        CCButton.button = START_BUTTON; // Übergibt den Bitmasken-Wert (z.B. 64) für den Test
+        P1IFG &= ~START_BUTTON;         // Flag sauber einzeln löschen
     }
     else if (P1IFG & STOP_BUTTON)
     {
-        CCButton.button = STOP_BUTTON;  // Setzt den erwarteten Wert (128)
-        P1IFG &= ~STOP_BUTTON;
+        CCButton.button = STOP_BUTTON;  // Übergibt den Bitmasken-Wert (z.B. 128) für den Test
+        P1IFG &= ~STOP_BUTTON;          // Flag sauber einzeln löschen
     }
     else
     {

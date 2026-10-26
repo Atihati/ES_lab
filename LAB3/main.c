@@ -29,7 +29,7 @@ void main(void)
 
     while(1)
         {
-            //LCD_BL_TOGGLE;          // Hintergrundbeleuchtung umschalten
-            //delayMsBlocked(250);    // 250 ms blockierend warten
+            LCD_BL_TOGGLE;          // Hintergrundbeleuchtung umschalten
+            delayMsBlocked(250);    // 250 ms blockierend warten
         }
 }
