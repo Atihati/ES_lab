@@ -11,6 +11,7 @@
 #include "halUCS.h"
 #include "halTimerB0.h"
 #include "halTimerA1.h"
+#include "halTimerA0.h"
 
 
 void halInit (void){
@@ -20,5 +21,6 @@ void halInit (void){
     halUCSInit();
     //halTimerB0Init();
     halTimerA1Init();
+    halTimerA0Init();
 
 }

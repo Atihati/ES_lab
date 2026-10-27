@@ -6,6 +6,8 @@
 #include "halTimerB0.h"
 #include "driverGeneral.h"
 #include "driverAktorik.h"
+#include "driversSensors.h"
+#include "halTimerA0.h"
 
 //#define RUN_TESTS                   // auskommentieren für den Normalbetrieb
 
@@ -15,6 +17,10 @@
 
 
 extern volatile ButtonCom CCButton;
+unsigned int dist;
+unsigned int speed;
+unsigned int cnt;
+unsigned int speed;
 
 /**
  * main.c
@@ -31,20 +37,27 @@ void main(void)
 //#endif
 
     while(1)
-    {
-        if (CCButton.active == 1)
         {
-            switch (CCButton.button)
+            if (CCButton.active == 1)
             {
-                case 0:             // START_BUTTON
-                    LCD_BL_TOGGLE;      // LCD EIN
-                    break;
-                case 1:             // STOP_BUTTON
-                    LCD_BL_TOGGLE;     // LCD OFF
-                    break;
+                switch (CCButton.button)
+                {
+                    case START_BUTTON:
+                        LCD_BACKLIGHT_ON;
+                        driverSetThrottle(50);
+                        break;
+                    case STOP_BUTTON:
+                        LCD_BACKLIGHT_OFF;
+                        driverSetBreak(1);
+                        break;
+                }
+
+                CCButton.active = 0;   // Clean Flag
             }
 
-            CCButton.active = 0;   // Clear Flag
+            // Hier kontinuierlich außerhalb des Button-Triggers aktualisieren:
+            dist = getDistance();
+            cnt = halTimerA0GetPulseCnt();
+            speed = getSpeed();
         }
-    }
 }

@@ -20,6 +20,8 @@ void halGpioInit(void)
     P1IFG &= ~(START_BUTTON | STOP_BUTTON); // Clear specific flags properly
     P1IE  |= START_BUTTON | STOP_BUTTON;
 
+    P1SEL |= RPM_SENSOR;
+
     // --- PORT 2 ---
     P2DIR = AUX_PIN_1 | AUX_PIN_2 | AUX_PIN_3 | AUX_PIN_4 | DEBUG_TXD; // Ohne Throttle/Steering!
     P2OUT = 0x00;
