@@ -9,11 +9,11 @@
 #include "driversSensors.h"
 #include "halTimerA0.h"
 
-//#define RUN_TESTS                   // auskommentieren für den Normalbetrieb
+#define RUN_TESTS                   // auskommentieren für den Normalbetrieb
 
-//#ifdef RUN_TESTS
-//#include "testHalGeneral.h"
-//#endif
+#ifdef RUN_TESTS
+#include "testHalGeneral.h"
+#endif
 
 
 extern volatile ButtonCom CCButton;
@@ -32,9 +32,9 @@ void main(void)
     halInit();
     driverInit();
 
-//#ifdef RUN_TESTS
-//    halInitTest();
-//#endif
+#ifdef RUN_TESTS
+    halInitTest();
+#endif
 
     while(1)
         {
@@ -44,7 +44,7 @@ void main(void)
                 {
                     case START_BUTTON:
                         LCD_BACKLIGHT_ON;
-                        driverSetThrottle(50);
+                        driverSetThrottle(100);
                         break;
                     case STOP_BUTTON:
                         LCD_BACKLIGHT_OFF;
@@ -55,7 +55,6 @@ void main(void)
                 CCButton.active = 0;   // Clean Flag
             }
 
-            // Hier kontinuierlich außerhalb des Button-Triggers aktualisieren:
             dist = getDistance();
             cnt = halTimerA0GetPulseCnt();
             speed = getSpeed();

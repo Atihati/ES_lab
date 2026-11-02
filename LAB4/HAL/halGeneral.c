@@ -19,7 +19,7 @@ void halInit (void){
     HAL_PMM_Init();
     halGpioInit();
     halUCSInit();
-    //halTimerB0Init();
+    halTimerB0Init();
     halTimerA1Init();
     halTimerA0Init();
 

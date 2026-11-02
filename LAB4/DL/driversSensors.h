@@ -8,8 +8,7 @@
 #ifndef DRIVER_SENSORS_H_
 #define DRIVER_SENSORS_H_
 
-// Definieren Sie hier den Weg pro Impuls/Flanke in mm (abhängig vom Radumfang und Geber-Raster)
-#define MM_PER_PULSE    5   // Beispielwert, an Ihr echtes Rad anpassen!
+#define MM_PER_PULSE    5
 
 void driverSensorsInit(void);
 unsigned int getSpeed(void);

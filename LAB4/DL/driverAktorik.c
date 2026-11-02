@@ -45,11 +45,6 @@ void driverSetThrottle(signed char throttleVal)
         // Skalierung für Fahrregler (Throttle):
         if (throttleVal < 0)
         {
-            // Rückwärtsbereich: Startet bei MinRPW (Neutralpunkt für Rückwärts)
-            // und zieht proportional nach MaxRPW (Voll Rückwärts) ab.
-            // Die Spanne von 0 bis -100 teilt sich auf (MinRPW - MaxRPW), also z.B. 2500 Ticks / 100 = 25 Ticks pro Schritt.
-            // Da MinRPW (5000) größer ist als MaxRPW (2500), subtrahieren wir den negativen Offset.
-            //setThrottle = (int)MinRPW + (((int)throttleVal * ((int)MinRPW - (int)MaxRPW)) / 100);
             setThrottle = (int)MinRPW + 25 * throttleVal;
         }
         else if (throttleVal > 0)
