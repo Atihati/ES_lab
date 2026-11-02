@@ -4982,3 +4982,11 @@ java.nio.channels.ClosedByInterruptException
 
 !ENTRY org.eclipse.ui 2 2 2026-11-02 14:31:07.380
 !MESSAGE com.ti.ccstudio.system.setup.ui.views.TargetConfigurationView: Deprecated relationship "fast" should be converted to "stack".
+
+!ENTRY com.ti.ccstudio.debug 1 0 2026-11-02 15:19:43.785
+!MESSAGE DS_ERROR: MSP430: JTAG Communication Error 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2026-11-02 15:19:43.800
+!MESSAGE DS_ERROR: MSP430: Breakpoint Manager: Could not write device Register
+

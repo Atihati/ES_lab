@@ -15670,3 +15670,81 @@ gmake[1]: 'LAB4.out' is up to date.
 gmake[1]: 'LAB4.out' is up to date.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project LAB4 ****
+
+"C:\\ti\\ccs1280\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../DL/driversSensors.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --data_model=restricted -Ooff --use_hw_mpy=F5 --include_path="C:/ES_repo/workspace_v12/LAB4/AL" --include_path="C:/ES_repo/workspace_v12/LAB4/test" --include_path="C:/ES_repo/workspace_v12/LAB4/test/unity" --include_path="C:/ES_repo/workspace_v12/LAB4/test/tstHAL" --include_path="C:/ES_repo/workspace_v12/LAB4/DL" --include_path="C:/ti/ccs1280/ccs/ccs_base/msp430/include" --include_path="C:/ES_repo/workspace_v12/LAB4/HAL" --include_path="C:/ES_repo/workspace_v12/LAB4" --include_path="C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power=all --define=__MSP430F5335__ --define=UNITY_INCLUDE_CONFIG_H -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="DL/driversSensors.d_raw" --obj_directory="DL"  "../DL/driversSensors.c"
+"../DL/driversSensors.c", line 10: remark #1534-D: (ULP 7.1) Detected use of global variable "totalDistance" within one function "getDistance". Recommend placing variable in the function locally
+Finished building: "../DL/driversSensors.c"
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --data_model=restricted -Ooff --use_hw_mpy=F5 --include_path="C:/ES_repo/workspace_v12/LAB4/AL" --include_path="C:/ES_repo/workspace_v12/LAB4/test" --include_path="C:/ES_repo/workspace_v12/LAB4/test/unity" --include_path="C:/ES_repo/workspace_v12/LAB4/test/tstHAL" --include_path="C:/ES_repo/workspace_v12/LAB4/DL" --include_path="C:/ti/ccs1280/ccs/ccs_base/msp430/include" --include_path="C:/ES_repo/workspace_v12/LAB4/HAL" --include_path="C:/ES_repo/workspace_v12/LAB4" --include_path="C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power=all --define=__MSP430F5335__ --define=UNITY_INCLUDE_CONFIG_H -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 61: warning #70-D: integer conversion resulted in truncation
+Finished building: "../main.c"
+ 
+Building target: "LAB4.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --data_model=restricted -Ooff --use_hw_mpy=F5 --advice:power=all --define=__MSP430F5335__ --define=UNITY_INCLUDE_CONFIG_H -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"LAB4.map" --heap_size=320 --stack_size=256 --cinit_hold_wdt=on -i"C:/ti/ccs1280/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1280/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/lib" -i"C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="LAB4_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "LAB4.out" "./main.obj" "./DL/driverAktorik.obj" "./DL/driverGeneral.obj" "./DL/driversSensors.obj" "./HAL/halGeneral.obj" "./HAL/halGpio.obj" "./HAL/halPMM.obj" "./HAL/halTimerA0.obj" "./HAL/halTimerA1.obj" "./HAL/halTimerB0.obj" "./HAL/halUCS.obj" "./HAL/halWdt.obj" "./test/testHalGeneral.obj" "./test/tstHAL/testHalCleanUp.obj" "./test/tstHAL/testHalGPIO.obj" "./test/tstHAL/testHalTimerB0.obj" "./test/unity/unity.obj" "../lnk_msp430f5335.cmd"  -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port E in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "LAB4.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LAB4 ****
+
+"C:\\ti\\ccs1280\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'LAB4.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LAB4 ****
+
+"C:\\ti\\ccs1280\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --data_model=restricted -Ooff --use_hw_mpy=F5 --include_path="C:/ES_repo/workspace_v12/LAB4/AL" --include_path="C:/ES_repo/workspace_v12/LAB4/test" --include_path="C:/ES_repo/workspace_v12/LAB4/test/unity" --include_path="C:/ES_repo/workspace_v12/LAB4/test/tstHAL" --include_path="C:/ES_repo/workspace_v12/LAB4/DL" --include_path="C:/ti/ccs1280/ccs/ccs_base/msp430/include" --include_path="C:/ES_repo/workspace_v12/LAB4/HAL" --include_path="C:/ES_repo/workspace_v12/LAB4" --include_path="C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power=all --define=__MSP430F5335__ --define=UNITY_INCLUDE_CONFIG_H -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "LAB4.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --data_model=restricted -Ooff --use_hw_mpy=F5 --advice:power=all --define=__MSP430F5335__ --define=UNITY_INCLUDE_CONFIG_H -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"LAB4.map" --heap_size=320 --stack_size=256 --cinit_hold_wdt=on -i"C:/ti/ccs1280/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1280/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/lib" -i"C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="LAB4_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "LAB4.out" "./main.obj" "./DL/driverAktorik.obj" "./DL/driverGeneral.obj" "./DL/driversSensors.obj" "./HAL/halGeneral.obj" "./HAL/halGpio.obj" "./HAL/halPMM.obj" "./HAL/halTimerA0.obj" "./HAL/halTimerA1.obj" "./HAL/halTimerB0.obj" "./HAL/halUCS.obj" "./HAL/halWdt.obj" "./test/testHalGeneral.obj" "./test/tstHAL/testHalCleanUp.obj" "./test/tstHAL/testHalGPIO.obj" "./test/tstHAL/testHalTimerB0.obj" "./test/unity/unity.obj" "../lnk_msp430f5335.cmd"  -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port E in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "LAB4.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LAB4 ****
+
+"C:\\ti\\ccs1280\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --data_model=restricted -Ooff --use_hw_mpy=F5 --include_path="C:/ES_repo/workspace_v12/LAB4/AL" --include_path="C:/ES_repo/workspace_v12/LAB4/test" --include_path="C:/ES_repo/workspace_v12/LAB4/test/unity" --include_path="C:/ES_repo/workspace_v12/LAB4/test/tstHAL" --include_path="C:/ES_repo/workspace_v12/LAB4/DL" --include_path="C:/ti/ccs1280/ccs/ccs_base/msp430/include" --include_path="C:/ES_repo/workspace_v12/LAB4/HAL" --include_path="C:/ES_repo/workspace_v12/LAB4" --include_path="C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power=all --define=__MSP430F5335__ --define=UNITY_INCLUDE_CONFIG_H -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "LAB4.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --data_model=restricted -Ooff --use_hw_mpy=F5 --advice:power=all --define=__MSP430F5335__ --define=UNITY_INCLUDE_CONFIG_H -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"LAB4.map" --heap_size=320 --stack_size=256 --cinit_hold_wdt=on -i"C:/ti/ccs1280/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1280/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/lib" -i"C:/ti/ccs1280/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="LAB4_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "LAB4.out" "./main.obj" "./DL/driverAktorik.obj" "./DL/driverGeneral.obj" "./DL/driversSensors.obj" "./HAL/halGeneral.obj" "./HAL/halGpio.obj" "./HAL/halPMM.obj" "./HAL/halTimerA0.obj" "./HAL/halTimerA1.obj" "./HAL/halTimerB0.obj" "./HAL/halUCS.obj" "./HAL/halWdt.obj" "./test/testHalGeneral.obj" "./test/tstHAL/testHalCleanUp.obj" "./test/tstHAL/testHalGPIO.obj" "./test/tstHAL/testHalTimerB0.obj" "./test/unity/unity.obj" "../lnk_msp430f5335.cmd"  -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port E in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "LAB4.out"
+ 
+
+**** Build Finished ****

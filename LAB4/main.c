@@ -55,6 +55,10 @@ void main(void)
                 CCButton.active = 0;   // Clean Flag
             }
 
+            //driverSetThrottle(100);
+            //delayMsBlocked(1000);
+            //driverSetThrottle(0);
+            //delayMsBlocked(1000);
             dist = getDistance();
             cnt = halTimerA0GetPulseCnt();
             speed = getSpeed();
