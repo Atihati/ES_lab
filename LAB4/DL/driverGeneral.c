@@ -9,8 +9,10 @@
 
 void driverInit(void)
 {
-    driverSetSteering(0);
     driverESCinit();
+    driverSetSteering(0);
+    driverSetBreak(1);
+
 }
 
 

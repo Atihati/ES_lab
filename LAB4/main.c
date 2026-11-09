@@ -30,7 +30,8 @@ unsigned int speed;
 void main(void)
 {
     halInit();
-//    driverInit();
+
+    driverInit();
 
 #ifdef RUN_TESTS
     halInitTest();
