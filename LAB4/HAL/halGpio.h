@@ -71,7 +71,7 @@
 #define LCD_BACKLIGHT_OFF  (P8OUT &= ~LCD_BL)
 #define LCD_BL_TOGGLE (P8OUT ^= LCD_BL)
 
-#define PWM_60HZ            0xA2C2  // 2,5MHz / 60Hz => 41666,67
+#define PWM_60HZ            0xA2C3//41667//0xA2C2  // 2,5MHz / 60Hz => 41666,67
 
 typedef struct {
     uint8_t active;     // TRUE 1 / FALSE 0

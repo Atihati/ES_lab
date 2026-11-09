@@ -30,7 +30,7 @@ unsigned int speed;
 void main(void)
 {
     halInit();
-    driverInit();
+//    driverInit();
 
 #ifdef RUN_TESTS
     halInitTest();
@@ -44,23 +44,25 @@ void main(void)
                 {
                     case START_BUTTON:
                         LCD_BACKLIGHT_ON;
+                        driverSetSteering(100);
                         driverSetThrottle(100);
                         break;
                     case STOP_BUTTON:
                         LCD_BACKLIGHT_OFF;
-                        driverSetBreak(1);
+                        driverSetSteering(-100);
+                        driverSetThrottle(50);
                         break;
                 }
 
                 CCButton.active = 0;   // Clean Flag
             }
 
-            //driverSetThrottle(100);
-            //delayMsBlocked(1000);
-            //driverSetThrottle(0);
-            //delayMsBlocked(1000);
+            driverSetSteering(100);
+            delayMsBlocked(250);
+
+            speed = getSpeed();
             dist = getDistance();
             cnt = halTimerA0GetPulseCnt();
-            speed = getSpeed();
+
         }
 }

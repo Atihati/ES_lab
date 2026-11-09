@@ -1,9 +1,9 @@
 #ifndef DL_DRIVER_AKTORIK_H_
 #define DL_DRIVER_AKTORIK_H_
 
-#define ST_MIDDLE 3750       // TBD
+#define ST_MIDDLE 3650       // TBD
 #define ST_maxLeft 2800      // TBD entspr. 1,1ms
-#define ST_maxRight 5000     //  TBD entspr. 1,9ms
+#define ST_maxRight 4500     //  TBD entspr. 1,9ms
 
 #define MaxRPW 2500         //1000 muS
 #define MinRPW 5000         //2000 muS

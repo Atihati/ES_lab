@@ -12,7 +12,7 @@
 unsigned int setSteerServo, setThrottle;
 extern volatile int speedControllerImpulse;
 
-void driverSetSteering(signed char steerVal)
+/*void driverSetSteering(signed char steerVal)
 {
 
     if (steerVal < -100)
@@ -26,6 +26,64 @@ void driverSetSteering(signed char steerVal)
 
     setSteerServo = (int)ST_MIDDLE + (((int)steerVal * 125) / 10);
 
+    halTimerA1SetSteering(setSteerServo);
+}
+
+void driverSetSteering(signed char steerVal)
+{
+    unsigned int tickVal;
+
+    // Wertebereich begrenzen (-100 bis +100)
+    if (steerVal < -100)
+    {
+        steerVal = -100;
+    }
+    else if (steerVal > 100)
+    {
+        steerVal = 100;
+    }
+
+    if (steerVal < 0)
+    {
+        // Linksbereich: 850 Ticks Spanne (3650 - 2800) -> 8.5 Ticks pro Prozent (* 85 / 10)
+        tickVal = (int)ST_MIDDLE + (((int)steerVal * 85) / 10);
+    }
+    else
+    {
+        // Rechtsbereich: 950 Ticks Spanne (4600 - 3650) -> 9.5 Ticks pro Prozent (* 95 / 10)
+        tickVal = (int)ST_MIDDLE + (((int)steerVal * 95) / 10);
+    }
+
+    setSteerServo = tickVal;
+    halTimerA1SetSteering(tickVal);
+}
+*/
+
+void driverSetSteering(signed char steerVal)
+{
+
+    // Wertebereich begrenzen (-100 bis +100)
+    if (steerVal < -100)
+    {
+        steerVal = -100;
+    }
+    else if (steerVal > 100)
+    {
+        steerVal = 100;
+    }
+
+    if (steerVal < 0)
+    {
+        setSteerServo = (int)ST_MIDDLE + ((int)steerVal * (((int)ST_MIDDLE - (int)ST_maxLeft) / 10)) / 10;
+    }
+    else if (steerVal == 0)
+    {
+        setSteerServo = (int)ST_MIDDLE;
+    }
+    else
+    {
+        setSteerServo = (int)ST_MIDDLE + ((int)steerVal * (((int)ST_maxRight - (int)ST_MIDDLE) / 10)) / 10;
+    }
     halTimerA1SetSteering(setSteerServo);
 }
 
@@ -49,8 +107,6 @@ void driverSetThrottle(signed char throttleVal)
         }
         else if (throttleVal > 0)
         {
-            // Vorwärtsbereich: Startet bei MinFPW und skaliert hoch bis MaxFPW.
-            //setThrottle = (int)MinFPW + (((int)throttleVal * ((int)MaxFPW - (int)MinFPW)) / 100);
             setThrottle = (int)MinFPW + 25 * throttleVal;
         }
         else

@@ -25,6 +25,7 @@ void halInitTest(void)
 
     testHalGPIORun();
     testHalTimerB0Run();
+    testHalTimerA1Run();
 
     UNITY_END();
 }

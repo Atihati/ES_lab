@@ -11,10 +11,16 @@
 #include <msp430.h>
 #include <stdint.h>
 
+/*
 #define ST_MIDDLE  3750
 #define ST_LEFT    2500
 #define ST_RIGHT   5000
 // TODO: Oszi_measurment
+ */
+
+#define ST_MIDDLE 3650       // TBD
+#define ST_maxLeft 2800      // TBD entspr. 1,1ms
+#define ST_maxRight 4500     //  TBD entspr. 1,9ms
 
 void halTimerA1Init(void);
 void halTimerA1SetSteering(unsigned int width);

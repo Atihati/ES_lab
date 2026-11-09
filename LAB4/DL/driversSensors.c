@@ -18,7 +18,9 @@ unsigned int getSpeed(void)
 {
     unsigned int pulses = halTimerA0GetPulseCnt();
 
-    unsigned int speed = (pulses * MM_PER_PULSE * 10);
+    unsigned int speed = (pulses * MM_PER_PULSE * 60);
+
+    halTimerA0ResetPulseCnt();
 
     return speed;
 }
