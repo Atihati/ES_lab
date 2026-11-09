@@ -10,6 +10,7 @@
 #include "halTimerA1.h"
 #include "halGPIO.h"
 #include "halUCS.h"
+#include "driverAktorik.h"
 
 static void timerSourceIsSMCLK(void)
 {
@@ -30,8 +31,8 @@ static void channelsAreInRightOutputMode(void)
 
 static void compareRegistersAreZeroAfterInit(void)
 {
-    TEST_ASSERT_EQUAL_UINT(0, TA1CCR1);
-    TEST_ASSERT_EQUAL_UINT(0, TA1CCR2);
+    TEST_ASSERT_EQUAL_UINT(MaxBreak, TA1CCR1);
+    TEST_ASSERT_EQUAL_UINT(ST_MIDDLE, TA1CCR2);
 }
 
 void testHalTimerA1Run(void)
